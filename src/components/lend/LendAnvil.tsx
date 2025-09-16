@@ -112,7 +112,10 @@ export const LendAnvil: React.FC<ReserveComponentProps> = ({ poolId, assetId }) 
         ],
       };
       // TODO:
-      poolMeta.id = 'CBPXVCDXVCRCD7RHXYPQUHKVE7OGLU6VSUHWIXYFBRRAS2VEZKZ2VA7L';
+      if (!sim) {
+        console.log("SETEANDO CONTRACT");
+        poolMeta.id = 'CBPXVCDXVCRCD7RHXYPQUHKVE7OGLU6VSUHWIXYFBRRAS2VEZKZ2VA7L';
+      }
       console.log('submitArgs: ', submitArgs);
       console.log('sim: ', sim);
       return await poolSubmit(poolMeta, submitArgs, sim);
@@ -120,16 +123,24 @@ export const LendAnvil: React.FC<ReserveComponentProps> = ({ poolId, assetId }) 
   };
 
   useDebouncedState(toLend, RPC_DEBOUNCE_DELAY, txType, async () => {
+    console.log('dale 1');
     setSimResponse(undefined);
+    console.log('dale 2');
     setParsedSimResult(undefined);
+    console.log('dale 3');
     let response = await handleSubmitTransaction(true);
+    console.log('dale 4');
     if (response) {
+      console.log('dale 5');
       setSimResponse(response);
+      console.log('dale 6');
       if (rpc.Api.isSimulationSuccess(response)) {
+        console.log('dale 7', response);
         setParsedSimResult(parseResult(response, PoolContractV1.parsers.submit));
       }
     }
     setLoadingEstimate(false);
+    console.log('dale 8');
   });
 
   if (pool === undefined || reserve === undefined) {
