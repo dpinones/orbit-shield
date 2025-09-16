@@ -9,9 +9,11 @@ export const CustomButton: React.FC<ButtonBaseProps> = ({ disabled, children, sx
         alignItems: 'center',
         padding: '6px',
         borderRadius: '5px',
-        transition: 'all 0.2s',
         '&.Mui-disabled': {
           opacity: 0.5,
+        },
+        '&:hover': {
+          backgroundColor: 'transparent',
         },
         ...sx,
       }}

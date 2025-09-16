@@ -22,7 +22,7 @@ export const OverlayModalTOS: React.FC = () => {
 
   return (
     <>
-      {showTosModal && (
+      {/* {showTosModal && (
         <Box
           sx={{
             width: '100%',
@@ -98,7 +98,7 @@ export const OverlayModalTOS: React.FC = () => {
             </Box>
           </Box>
         </Box>
-      )}
+      )} */}
     </>
   );
 };

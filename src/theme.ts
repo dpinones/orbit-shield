@@ -48,56 +48,60 @@ const pxToRem = (px: number) => {
 
 const theme: Theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     tonalOffset: 0,
     background: {
-      default: '#191B1F',
-      paper: '#212429E5',
+      default: '#f5f5f5',
+      paper: '#ffffff',
     },
     primary: {
-      main: '#36B04A',
-      opaque: '#36B04A26',
-      contrastText: 'white',
+      main: '#1B4B47',
+      opaque: '#1B4B4726',
+      contrastText: '#ffffff',
     },
     secondary: {
-      main: '#ff3366',
-      opaque: '#ff336626',
+      main: '#D2691E',
+      opaque: '#D2691E26',
     },
     lend: {
-      main: '#00C4EF',
-      opaque: '#00C4EF26',
+      main: '#1B4B47',
+      opaque: '#1B4B4726',
     },
     borrow: {
-      main: '#FF8A00',
-      opaque: '#FF8A0026',
+      main: '#D2691E',
+      opaque: '#D2691E26',
     },
     backstop: {
-      main: '#E16BFF',
-      opaque: '#E16BFF26',
+      main: '#1B4B47',
+      opaque: '#1B4B4726',
     },
     positive: {
-      main: '#2775C9',
-      opaque: '#2775C930',
+      main: '#1B4B47',
+      opaque: '#1B4B4730',
     },
     accent: {
-      main: '#191B1F',
-      opaque: '#191B1F',
+      main: '#8A9BA8',
+      opaque: '#8A9BA8',
     },
     menu: {
-      main: '#2E3138',
-      light: '#2E313893',
+      main: '#ffffff',
+      light: '#f5f5f5',
     },
     text: {
-      primary: '#FFFFFF',
-      secondary: '#979797',
+      primary: '#2C3E50',
+      secondary: '#8A9BA8',
     },
     warning: {
-      main: '#FFCB00',
-      opaque: '#FFCB0026',
+      main: '#D2691E',
+      opaque: '#D2691E26',
     },
     error: {
-      main: '#FF3366',
-      opaque: '#FF336626',
+      main: '#D2691E',
+      opaque: '#D2691E26',
+    },
+    action: {
+      hover: 'transparent',
+      selected: '#D1E7DD',
     },
   },
   typography: {
@@ -162,6 +166,54 @@ const theme: Theme = createTheme({
       md: 640,
       lg: 850, // marker for compact layout requirements
       xl: 1024,
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'inherit',
+            boxShadow: 'none',
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+        },
+      },
+    },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: 'transparent',
+          },
+        },
+      },
     },
   },
 });

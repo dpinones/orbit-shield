@@ -8,13 +8,13 @@ const TermsOfService: NextPage = () => {
   return (
     <>
       <>
-        <Row sx={{ margin: '12px', padding: '12px' }}>
+        {/* <Row sx={{ margin: '12px', padding: '12px' }}>
           <Typography variant="h1">Blend App Terms of Service</Typography>
         </Row>
         <Divider />
         <Box sx={{ margin: '12px', padding: '12px' }}>
           <TOS />
-        </Box>
+        </Box> */}
       </>
     </>
   );

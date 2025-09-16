@@ -19,7 +19,6 @@ export const OpaqueButton: React.FC<OpaqueButtonProps> = ({
       sx={{
         background: palette.opaque,
         color: palette.main,
-        '&:hover': { background: palette.opaque, color: 'white' },
         ...sx,
       }}
       {...props}
