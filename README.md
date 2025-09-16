@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blend UI
+
+An open source UI for interacting with the Blend Protocol.
 
 ## Getting Started
 
-First, run the development server:
+The Blend UI has network specific configurations and build commands, which all export the UI to `out/`.
+
+To run the UI as a dev server, first build the UI to setup the local environment variables then run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Testnet
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The testnet configuration is located at `.env.testnet`. To build the testnet version, run:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build:testnet
+```
 
-## Learn More
+#### Mainnet
 
-To learn more about Next.js, take a look at the following resources:
+The mainnet configuration is located at `.env.production`. To build the mainnet version, run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build:mainnet
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Standalone
 
-## Deploy on Vercel
+It's recommended to edit the `.env.testnet` config file for any local or custom Blend deployment, then run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build:testnet
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## IPFS Deployment
+
+Each release gets deployed to IPFS automatically. To get the latest release, please see the [Releases page](https://github.com/blend-capital/blend-ui/releases).
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug fixes, please feel free to open an issue or submit a pull request.
