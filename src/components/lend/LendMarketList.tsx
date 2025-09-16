@@ -67,9 +67,14 @@ export const LendMarketList: React.FC<PoolComponentProps> = ({ poolId }) => {
         )}
         <Box sx={{ width: viewType === ViewType.MOBILE ? 'auto' : headerWidth }} />
       </Box>
-      {Array.from(pool.reserves.values()).map((reserve) => (
-        <LendMarketCard key={reserve.assetId} poolId={poolId} reserve={reserve} />
-      ))}
+      {Array.from(pool.reserves.values())
+        .filter((reserve) => {
+          console.log('reserve.assetId:', reserve.assetId);
+          return reserve.assetId === 'CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC';
+        })
+        .map((reserve) => (
+          <LendMarketCard key={reserve.assetId} poolId={poolId} reserve={reserve} />
+        ))}
     </Box>
   );
 };

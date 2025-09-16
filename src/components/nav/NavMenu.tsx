@@ -1,7 +1,6 @@
 import { Version } from '@blend-capital/blend-sdk';
-import MenuIcon from '@mui/icons-material/Menu';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import { Alert, IconButton, Menu, MenuItem, Snackbar, Typography, useTheme } from '@mui/material';
+import { Alert, Menu, MenuItem, Snackbar, Typography, useTheme } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
 import { useSettings, ViewType } from '../../contexts';
@@ -35,71 +34,71 @@ export const NavMenu = () => {
 
   return (
     <>
-      <IconButton
+      {/* <IconButton
         id="nav-dropdown-button"
         onClick={handleClick}
         sx={{ width: '100%', height: '100%', color: theme.palette.text.secondary }}
       >
         <MenuIcon />
-      </IconButton>
-      {viewType === ViewType.REGULAR && (
-        <Menu
-          id="nav-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            'aria-labelledby': 'pool-dropdown-button',
-          }}
-          PaperProps={{
-            // @ts-ignore - TODO: Figure out why typing is broken
-            backgroundColor: theme.palette.menu.main,
-          }}
-        >
-          <Link href={{ pathname: '/auction', query: { poolId: safePoolId } }}>
-            <MenuItem onClick={handleClose} sx={{ color: '#FFFFFF' }}>
-              Auctions
-            </MenuItem>
-          </Link>
-          <a href="https://core.allbridge.io/" target="_blank" rel="noreferrer">
-            <MenuItem
-              onClick={handleClose}
-              sx={{ color: '#FFFFFF', justifyContent: 'space-between' }}
-            >
-              <Typography>Bridge USDC</Typography>
-              <OpenInNewIcon fontSize="inherit" />
-            </MenuItem>
-          </a>
-          <Link href="/settings">
-            <MenuItem onClick={handleClose} sx={{ color: '#FFFFFF' }}>
-              Settings
-            </MenuItem>
-          </Link>
-          <a href="https://docs.blend.capital/" target="_blank" rel="noreferrer">
-            <MenuItem
-              onClick={handleClose}
-              sx={{ color: '#FFFFFF', justifyContent: 'space-between' }}
-            >
-              <Typography>Docs</Typography>
-              <OpenInNewIcon fontSize="inherit" />
-            </MenuItem>
-          </a>
-          <a href="https://github.com/blend-capital" target="_blank" rel="noreferrer">
-            <MenuItem
-              onClick={handleClose}
-              sx={{ color: '#FFFFFF', justifyContent: 'space-between' }}
-            >
-              <Typography>Github</Typography>
-              <OpenInNewIcon fontSize="inherit" />
-            </MenuItem>
-          </a>
-          <Link href="/termsofservice">
-            <MenuItem onClick={handleClose} sx={{ color: '#FFFFFF' }}>
-              Terms of Service
-            </MenuItem>
-          </Link>
-        </Menu>
-      )}
+      </IconButton> */}
+      {/* {viewType === ViewType.REGULAR && (
+        // <Menu
+        //   id="nav-menu"
+        //   anchorEl={anchorEl}
+        //   open={open}
+        //   onClose={handleClose}
+        //   MenuListProps={{
+        //     'aria-labelledby': 'pool-dropdown-button',
+        //   }}
+        //   PaperProps={{
+        //     // @ts-ignore - TODO: Figure out why typing is broken
+        //     backgroundColor: theme.palette.menu.main,
+        //   }}
+        // >
+        //   <Link href={{ pathname: '/auction', query: { poolId: safePoolId } }}>
+        //     <MenuItem onClick={handleClose} sx={{ color: '#FFFFFF' }}>
+        //       Auctions
+        //     </MenuItem>
+        //   </Link>
+        //   <a href="https://core.allbridge.io/" target="_blank" rel="noreferrer">
+        //     <MenuItem
+        //       onClick={handleClose}
+        //       sx={{ color: '#FFFFFF', justifyContent: 'space-between' }}
+        //     >
+        //       <Typography>Bridge USDC</Typography>
+        //       <OpenInNewIcon fontSize="inherit" />
+        //     </MenuItem>
+        //   </a>
+        //   <Link href="/settings">
+        //     <MenuItem onClick={handleClose} sx={{ color: '#FFFFFF' }}>
+        //       Settings
+        //     </MenuItem>
+        //   </Link>
+        //   <a href="https://docs.blend.capital/" target="_blank" rel="noreferrer">
+        //     <MenuItem
+        //       onClick={handleClose}
+        //       sx={{ color: '#FFFFFF', justifyContent: 'space-between' }}
+        //     >
+        //       <Typography>Docs</Typography>
+        //       <OpenInNewIcon fontSize="inherit" />
+        //     </MenuItem>
+        //   </a>
+        //   <a href="https://github.com/blend-capital" target="_blank" rel="noreferrer">
+        //     <MenuItem
+        //       onClick={handleClose}
+        //       sx={{ color: '#FFFFFF', justifyContent: 'space-between' }}
+        //     >
+        //       <Typography>Github</Typography>
+        //       <OpenInNewIcon fontSize="inherit" />
+        //     </MenuItem>
+        //   </a>
+        //   <Link href="/termsofservice">
+        //     <MenuItem onClick={handleClose} sx={{ color: '#FFFFFF' }}>
+        //       Terms of Service
+        //     </MenuItem>
+        //   </Link>
+        // </Menu>
+      )} */}
       {viewType !== ViewType.REGULAR && (
         <Menu
           id="nav-menu"

@@ -127,7 +127,7 @@ const Dashboard: NextPage = () => {
       <LendPositionList poolId={safePoolId} />
       <BorrowPositionList poolId={safePoolId} />
       <Divider />
-      <Row>
+      {/* <Row>
         <Section width={SectionSize.FULL} sx={{ padding: '0px' }}>
           <ToggleButton
             active={showLend}
@@ -146,7 +146,7 @@ const Dashboard: NextPage = () => {
             Borrow
           </ToggleButton>
         </Section>
-      </Row>
+      </Row> */}
       <Row sx={{ padding: '6px', justifyContent: 'space-between' }}>
         <Typography variant="body1">{`Assets to ${showLend ? 'supply' : 'borrow'}`}</Typography>
         <Box

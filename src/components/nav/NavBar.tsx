@@ -1,13 +1,11 @@
 import { Version } from '@blend-capital/blend-sdk';
-import { Box, IconButton } from '@mui/material';
-import Image from 'next/image';
+import { Box } from '@mui/material';
 import { ViewType, useSettings } from '../../contexts';
 import { useBackstop } from '../../hooks/api';
 import { Row } from '../common/Row';
 import { Section, SectionSize } from '../common/Section';
 import { SectionBase } from '../common/SectionBase';
 import { NavItem } from './NavItem';
-import { NavMenu } from './NavMenu';
 import { WalletMenu } from './WalletMenu';
 
 export const NavBar = () => {
@@ -17,14 +15,14 @@ export const NavBar = () => {
   const poolId = (lastPool ? lastPool.id : backstop?.config?.rewardZone[0]) ?? '';
 
   return (
-    <Row sx={{ height: '62px' }}>
-      <SectionBase sx={{ width: '50px', margin: '6px' }}>
+    <Row sx={{ height: '62px', justifyContent: 'center' }}>
+      {/* <SectionBase sx={{ width: '50px', margin: '6px' }}>
         <a href="https://blend.capital" target="_blank" rel="noreferrer">
           <IconButton sx={{ width: '79%', height: '79%', margin: '6px' }}>
             <Image src="/icons/blend_logo.svg" layout="fill" alt="Blend Logo" />
           </IconButton>
         </a>
-      </SectionBase>
+      </SectionBase> */}
       {viewType === ViewType.REGULAR && (
         <Box
           sx={{
@@ -36,17 +34,17 @@ export const NavBar = () => {
           }}
         >
           <Section width={SectionSize.LARGE}>
-            <NavItem to={{ pathname: '/' }} title="Markets" sx={{ width: '33%' }} />
+            <NavItem to={{ pathname: '/' }} title="Markets" sx={{ width: '50%' }} />
             <NavItem
               to={{ pathname: '/dashboard', query: { poolId } }}
               title="Dashboard"
-              sx={{ width: '33%' }}
+              sx={{ width: '50%' }}
             />
-            <NavItem
+            {/* <NavItem
               to={{ pathname: '/backstop', query: { poolId } }}
               title="Backstop"
               sx={{ width: '33%' }}
-            />
+            /> */}
           </Section>
           <Section width={SectionSize.SMALL}>
             <WalletMenu />
@@ -59,9 +57,9 @@ export const NavBar = () => {
         </SectionBase>
       )}
 
-      <SectionBase sx={{ width: '50px', margin: '6px' }}>
+      {/* <SectionBase sx={{ width: '50px', margin: '6px' }}>
         <NavMenu />
-      </SectionBase>
+      </SectionBase> */}
     </Row>
   );
 };
