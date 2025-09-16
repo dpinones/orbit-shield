@@ -40,6 +40,10 @@ export const OverlayModalText: React.FC<OverlayModalTextProps> = ({
           marginTop: '18vh',
           alignItems: 'center',
           justifyContent: 'center',
+          backgroundColor: '#ffffff',
+          padding: '24px',
+          borderRadius: '8px',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         }}
       >
         <CircularProgress size={70} sx={{ color: theme.palette.primary.main }} />

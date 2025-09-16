@@ -84,7 +84,7 @@ export const OverlayModal: React.FC = () => {
         zIndex: '10',
         flexWrap: 'wrap',
         flexDirection: 'column',
-        backgroundColor: 'rgba(25, 27, 31, 0.9)',
+        backgroundColor: 'rgba(128, 128, 128, 0.3)',
       }}
     >
       {txStatus === TxStatus.BUILDING && (

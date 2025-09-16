@@ -15,7 +15,8 @@ export const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef(
         variant="text"
         sx={{
           background: 'transparent',
-          color: theme.palette.text.primary,
+          color: '#1B4B47',
+          fontWeight: 500,
           ...sx,
         }}
         {...props}

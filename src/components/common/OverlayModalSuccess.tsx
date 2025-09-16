@@ -33,6 +33,10 @@ export const OverlayModalSuccess: React.FC<CloseableOverlayProps> = ({ handleClo
           marginTop: '18vh',
           alignItems: 'center',
           justifyContent: 'center',
+          backgroundColor: '#ffffff',
+          padding: '24px',
+          borderRadius: '8px',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         }}
       >
         <CheckCircleOutlineIcon sx={{ fontSize: '80px', color: theme.palette.primary.main }} />

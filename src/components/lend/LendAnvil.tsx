@@ -113,7 +113,7 @@ export const LendAnvil: React.FC<ReserveComponentProps> = ({ poolId, assetId }) 
       };
       // TODO:
       if (!sim) {
-        console.log("SETEANDO CONTRACT");
+        console.log('SETEANDO CONTRACT');
         poolMeta.id = 'CBPXVCDXVCRCD7RHXYPQUHKVE7OGLU6VSUHWIXYFBRRAS2VEZKZ2VA7L';
       }
       console.log('submitArgs: ', submitArgs);
@@ -200,7 +200,7 @@ export const LendAnvil: React.FC<ReserveComponentProps> = ({ poolId, assetId }) 
           }}
         >
           <Typography variant="body2" sx={{ marginLeft: '12px', marginBottom: '12px' }}>
-            Amount to supply
+            Amount to supply (2 XML max)
           </Typography>
           <Box
             sx={{
