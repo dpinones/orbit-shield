@@ -117,13 +117,13 @@ export const PositionOverview: React.FC<PoolComponentProps> = ({ poolId }) => {
         >
           <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
             <FlameIcon />
-            <StackedText
+            {/* <StackedText
               title="Claim Pool Emissions"
               titleColor="inherit"
               text={`${toBalance(emissions)} BLND`}
               textColor="inherit"
               type="large"
-            />
+            /> */}
           </Box>
           <ArrowForwardIcon fontSize="inherit" />
         </CustomButton>
@@ -272,9 +272,9 @@ export const PositionOverview: React.FC<PoolComponentProps> = ({ poolId }) => {
           <BorrowCapRing borrowLimit={userEst?.borrowLimit} />
         </Box>
       </Box>
-      <Box sx={{ width: isRegularViewType ? '45%' : '100%', display: 'flex' }}>
+      {/* <Box sx={{ width: isRegularViewType ? '45%' : '100%', display: 'flex' }}>
         {renderClaimButton()}
-      </Box>
+      </Box> */}
     </Row>
   );
 };

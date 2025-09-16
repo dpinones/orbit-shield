@@ -1,11 +1,8 @@
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import WaterDropOutlinedIcon from '@mui/icons-material/WaterDropOutlined';
-import { Alert, Box, Snackbar, Typography, useTheme } from '@mui/material';
+import { Alert, Snackbar, useTheme } from '@mui/material';
 import React from 'react';
 import { useWallet } from '../../contexts/wallet';
 import { useHorizonAccount, usePool, usePoolMeta, useTokenMetadataList } from '../../hooks/api';
 import { requiresTrustline } from '../../utils/horizon';
-import { OpaqueButton } from './OpaqueButton';
 
 interface FaucetBannerParams {
   poolId: string;
@@ -44,7 +41,7 @@ export const FaucetBanner = ({ poolId }: FaucetBannerParams) => {
 
   return (
     <>
-      {needsFaucet ? (
+      {/* {needsFaucet ? (
         <OpaqueButton
           onClick={() => {
             handleFaucet();
@@ -70,7 +67,7 @@ export const FaucetBanner = ({ poolId }: FaucetBannerParams) => {
         </OpaqueButton>
       ) : (
         <></>
-      )}
+      )} */}
 
       <Snackbar
         open={openCon}
